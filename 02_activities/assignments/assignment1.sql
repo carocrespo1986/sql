@@ -41,13 +41,14 @@ filtered by vendor IDs between 8 and 10 (inclusive) using either:
 -- option 1
 SELECT *, quantity*cost_to_customer_per_qty as 'price'
 FROM customer_purchases
-WHERE vendor_id BETWEEN 8 AND 10;
-
--- option 2
-SELECT *, quantity*cost_to_customer_per_qty as 'price'
-FROM customer_purchases
 WHERE vendor_id > 7
 AND vendor_id < 11;
+
+-- option 2
+
+SELECT *, quantity*cost_to_customer_per_qty as 'price'
+FROM customer_purchases
+WHERE vendor_id BETWEEN 8 AND 10;
 
 --CASE
 /* 1. Products can be sold by the individual unit or by bulk measures like lbs. or oz. 
