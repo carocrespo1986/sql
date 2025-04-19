@@ -26,6 +26,12 @@ OR product_id = 9;
 
 
 -- option 2
+SELECT *
+FROM customer_purchases
+WHERE product_id > 3
+AND product_id < 5
+OR product_id < 10
+AND product_id > 8;
 
 /*2. Write a query that returns all customer purchases and a new calculated column 'price' (quantity * cost_to_customer_per_qty), 
 filtered by vendor IDs between 8 and 10 (inclusive) using either:
@@ -56,6 +62,7 @@ SELECT product_id, product_name
 	ELSE 'bulk.'
 END AS 'prod_qty_type_condensed'
 FROM product;
+
 /* 2. We want to flag all of the different types of pepper products that are sold at the market. 
 add a column to the previous query called pepper_flag that outputs a 1 if the product_name 
 contains the word “pepper” (regardless of capitalization), and otherwise outputs 0. */
