@@ -54,7 +54,8 @@ The store wants to keep customer addresses. Propose two architectures for the CU
 **HINT:** search type 1 vs type 2 slowly changing dimensions. 
 
 ```
-Your answer...
+Type 1 Slowly Changing Dimensions (SCDs) overwrite existing records with new values, without keeping a historical record. This would be the choice for the CUSTOMER_ADDRESS table where changes should overwrite previous data.
+Type 2 SCDs create a new record for each change, preserving all historical versions. This would be the choice for the CUSTOMER_ADDRESS table where changes need to be retained.
 ```
 
 ***
